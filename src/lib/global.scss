@@ -1,0 +1,17 @@
+button {
+  padding: 0.5rem;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  color: #111;
+  border: none;
+  $o: 4px;
+  $b: 12px;
+  box-shadow: $o $o $b #c5c5c5, (-$o) (-$o) $b #eee;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+  &:disabled {
+    background-color: #ccc;
+  }
+}

@@ -46,16 +46,18 @@
   });
 
   let answered = false;
+  let correctAnswer: boolean | null = null;
 
   function next() {
     answered = false;
+    correctAnswer = null;
     currentKey = drawQuestion();
   }
 
-  let statsView = [];
+  let statsView: string[][] = [];
   $: {
     if (!stats) break $;
-    statsView = keys.reduce((d, k) => {
+    statsView = keys.reduce((d: string[][], k) => {
       const i = $stats[k] ?? 0;
       while (i >= d.length) d.push([]);
       d[i].push(k);
@@ -78,7 +80,7 @@
       <li>{i}: {ks.length}</li>
     {/each}
   </ul>
-  <p>
+  <div class="buttons">
     <button
       on:click={() => {
         if (confirm("Opravdu resetovat statistiky?")) {
@@ -99,13 +101,15 @@
     <button
       on:click={async () => {
         try {
-          $stats = JSON.parse(prompt("Import"));
+          const data = prompt("Import");
+          if (data === null) return;
+          $stats = JSON.parse(data);
         } catch (e) {
           alert(e);
         }
       }}>Import</button
     >
-  </p>
+  </div>
 </div>
 
 {#if currentQuestion}
@@ -119,17 +123,58 @@
       } else {
         delete $stats[currentKey];
       }
+      correctAnswer = detail;
       answered = true;
     }}
     data={currentQuestion}
     {answered}
-  />
+  >
+    <div class="info">
+      <span>Otázka {currentKey}</span>
+      <span style:color={!answered ? "unset" : correctAnswer ? "#191" : "#911"}>
+        {#if !answered}
+          Vyberte odpověď
+        {:else if correctAnswer}
+          Správná odpověď ({$stats[currentKey]}.)
+        {:else}
+          Nesprávná odpověď
+        {/if}
+      </span>
+      <button
+        disabled={!answered}
+        on:click={next}
+        style="width: 100%; margin-top: 1rem;"
+        >Pokračovat (&lt;Enter&gt;)</button
+      >
+    </div>
+  </Question>
 {:else}
-  <button on:click={next}>Start</button>
+  <div class="start">
+    <button on:click={next}>Start</button>
+  </div>
 {/if}
-{#if answered}
-  <p>
-    Bucket: {$stats[currentKey] ?? 0}.
-    <button on:click={next}>Continue (press enter)</button>
-  </p>
-{/if}
+
+<style lang="scss">
+  .buttons {
+    display: flex;
+    gap: 1rem;
+
+    & > * {
+      flex-grow: 1;
+    }
+  }
+
+  .info {
+    display: grid;
+    grid-auto-rows: 1fr;
+  }
+
+  .start {
+    padding: 1.5rem;
+
+    & > button {
+      width: 100%;
+      height: 3rem;
+    }
+  }
+</style>

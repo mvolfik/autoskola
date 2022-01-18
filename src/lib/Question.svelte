@@ -27,10 +27,10 @@
     }
   }}
 />
-<div class="outer">
+<div>
   <p>{data.data.question}</p>
   {#if data.data.image !== undefined}
-    <div class="img">
+    <div class="media">
       <img
         src={"https://etesty2.mdcr.cz" + data.data.image}
         alt="Question detail"
@@ -38,7 +38,7 @@
     </div>
   {/if}
   {#if data.data.video !== undefined}
-    <div class="vid">
+    <div class="media">
       <video
         autoplay
         loop
@@ -47,33 +47,53 @@
       />
     </div>
   {/if}
-  <div class="answers" class:answered>
+  <div class="answers">
     {#each shuffledAnswers as [ansId, answer] (ansId)}
-      <p
-        class:correct={answered && ansId === data.answerId}
-        on:click={() => {
-          choose(ansId);
-        }}
-      >
-        {answer}
-      </p>
+      <div>
+        <button
+          class="answer"
+          disabled={answered}
+          class:correct={answered && ansId === data.answerId}
+          on:click={() => {
+            choose(ansId);
+          }}
+        >
+          {answer}
+        </button>
+      </div>
     {/each}
+    <div style="grid-column: 2;">
+      <slot />
+    </div>
   </div>
   {#if !answered}
-    <p class="info">Vyberte odpověď kliknutím nebo stiskem kláves 1/2/3</p>
+    <p style="color: #777;">
+      Vyberte odpověď kliknutím nebo stiskem kláves 1/2/3
+    </p>
   {/if}
 </div>
 
 <style lang="scss">
-  .answers > p {
-    border: 1px solid #222;
-    cursor: pointer;
-
-    &.correct {
-      background-color: #9f9;
-    }
+  .media > * {
+    max-width: 100%;
   }
-  .info {
-    color: #777;
+
+  .answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    & > div {
+      & > button.answer {
+        width: 100%;
+        height: 100%;
+
+        &.correct {
+          background-color: #9f9;
+        }
+      }
+    }
   }
 </style>
