@@ -11,6 +11,7 @@
   );
 
   function choose(id: string) {
+    if (answered) return;
     const correct = id === data.answerId;
     dispatch("answer", correct);
     answered = true;
@@ -19,11 +20,9 @@
 
 <svelte:window
   on:keyup={(e) => {
-    if (!answered) {
-      for (let i = 1; i <= shuffledAnswers.length; i++) {
-        if (e.code === `Digit${i}` || e.code === `Numpad${i}`) {
-          choose(shuffledAnswers[i - 1][0]);
-        }
+    for (let i = 1; i <= shuffledAnswers.length; i++) {
+      if (e.code === `Digit${i}` || e.code === `Numpad${i}`) {
+        choose(shuffledAnswers[i - 1][0]);
       }
     }
   }}

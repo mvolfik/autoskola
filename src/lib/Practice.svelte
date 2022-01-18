@@ -10,7 +10,22 @@
   let stats: Writable<Record<string, number>>;
 
   function drawQuestion() {
-    return keys[Math.floor(Math.random() * keys.length)];
+    let sum = 0;
+    const weights = [];
+    for (const [i, ks] of statsView.entries()) {
+      const w = ks.length / Math.pow(2, i);
+      sum += w;
+      weights.push(w);
+    }
+    const r = Math.random() * sum;
+    let ps = 0;
+    let i = 0;
+    while (r >= ps) {
+      ps += weights[i++];
+    }
+    let bucket = statsView[i - 1];
+
+    return bucket[Math.floor(Math.random() * bucket.length)];
   }
 
   let currentKey: string;
@@ -37,15 +52,15 @@
     currentKey = drawQuestion();
   }
 
-  let statsView = {};
+  let statsView = [];
   $: {
     if (!stats) break $;
     statsView = keys.reduce((d, k) => {
       const i = $stats[k] ?? 0;
-      if (d[i] === undefined) d[i] = 0;
-      d[i] += 1;
+      while (i >= d.length) d.push([]);
+      d[i].push(k);
       return d;
-    }, {});
+    }, []);
   }
 </script>
 
@@ -59,7 +74,9 @@
 
 <div class="stats">
   <ul>
-    {#each [...Object.entries(statsView)] as [i, n] (i)}<li>{i}: {n}</li>{/each}
+    {#each [...statsView.entries()] as [i, ks] (i)}
+      <li>{i}: {ks.length}</li>
+    {/each}
   </ul>
   <p>
     <button
@@ -112,7 +129,7 @@
 {/if}
 {#if answered}
   <p>
-    Bucket: {$stats[currentKey]}.
+    Bucket: {$stats[currentKey] ?? 0}.
     <button on:click={next}>Continue (press enter)</button>
   </p>
 {/if}
