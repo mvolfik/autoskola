@@ -187,10 +187,7 @@
   "1108": {
     "answerId": "30363",
     "question": "Smíte jako řidič vozidla z výhledu v dané situaci vjet na tento železniční přejezd?",
-    "answers": {
-      "30362": "Ano.",
-      "30363": "Ne."
-    },
+    "answers": { "30362": "Ano.", "30363": "Ne." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/1068"
   },
@@ -346,11 +343,7 @@
   "1408": {
     "answerId": "27625",
     "question": "Která z vyobrazených dopravních značek neupravuje přednost.",
-    "answers": {
-      "27623": "1.",
-      "27624": "2.",
-      "27625": "3."
-    },
+    "answers": { "27623": "1.", "27624": "2.", "27625": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/P 3.jpg",
@@ -361,11 +354,7 @@
   "1427": {
     "answerId": "26392",
     "question": "Která z vyobrazených dopravních značek neupravuje přednost.",
-    "answers": {
-      "26390": "1.",
-      "26391": "2.",
-      "26392": "3."
-    },
+    "answers": { "26390": "1.", "26391": "2.", "26392": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/P 3.jpg",
@@ -376,11 +365,7 @@
   "1441": {
     "answerId": "19916",
     "question": "Která z vyobrazených dopravních značek neupravuje přednost.",
-    "answers": {
-      "19915": "1.",
-      "19916": "2.",
-      "19917": "3."
-    },
+    "answers": { "19915": "1.", "19916": "2.", "19917": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/P 3.jpg",
@@ -419,19 +404,13 @@
   "1469": {
     "answerId": "14348",
     "question": "Na pozemní komunikaci objíždí vozidlo překážku. Musí jeho řidič dávat znamení o změně směru své jízdy?",
-    "answers": {
-      "14348": "Ano.",
-      "14349": "Ne."
-    },
+    "answers": { "14348": "Ano.", "14349": "Ne." },
     "noShuffle": true
   },
   "1476": {
     "answerId": "14366",
     "question": "Po předjetí jiného vozidla máte v úmyslu se zařadit před toto vozidlo. Musíte dávat znamení o změně směru jízdy?",
-    "answers": {
-      "14366": "Ano.",
-      "14367": "Ne."
-    },
+    "answers": { "14366": "Ano.", "14367": "Ne." },
     "noShuffle": true
   },
   "1477": {
@@ -582,21 +561,14 @@
   "1575": {
     "answerId": "14709",
     "question": "Může řidič vozidla z výhledu vjet na železniční přejezd?",
-    "answers": {
-      "14708": "Ano.",
-      "14709": "Ne."
-    },
+    "answers": { "14708": "Ano.", "14709": "Ne." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/1390"
   },
   "1579": {
     "answerId": "14721",
     "question": "Řidič vozidla z výhledu projede vyobrazenou křižovatkou jako:",
-    "answers": {
-      "14721": "První.",
-      "14722": "Druhý.",
-      "14723": "Třetí."
-    },
+    "answers": { "14721": "První.", "14722": "Druhý.", "14723": "Třetí." },
     "video": "/Content/ImageQuestion/1394"
   },
   "1584": {
@@ -629,10 +601,7 @@
   "1598": {
     "answerId": "14784",
     "question": "Můžete při vjíždění na tramvajový pás omezit v jízdě tramvaj?",
-    "answers": {
-      "14783": "Ano.",
-      "14784": "Ne."
-    },
+    "answers": { "14783": "Ano.", "14784": "Ne." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/1400"
   },
@@ -856,10 +825,7 @@
   "1931": {
     "answerId": "30815",
     "question": "Lze za nejbližší dopravní značkou zastavit za účelem neprodleného vystoupení přepravovaných osob?",
-    "answers": {
-      "30815": "Ano.",
-      "30816": "Ne."
-    },
+    "answers": { "30815": "Ano.", "30816": "Ne." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/1619"
   },
@@ -926,11 +892,7 @@
   "1991": {
     "answerId": "26399",
     "question": "Vyberte dopravní značku \"Nejnižší dovolená rychlost\", která řidiči přikazuje, pokud to ostatní okolnosti provozu na pozemních komunikacích dovolují, jet nejméně rychlostí vyjádřenou na značce číslem v kilometrech za hodinu.",
-    "answers": {
-      "26399": "1.",
-      "26400": "2.",
-      "26401": "3."
-    },
+    "answers": { "26399": "1.", "26400": "2.", "26401": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/C 6a.gif",
@@ -1401,11 +1363,7 @@
   "2079": {
     "answerId": "19821",
     "question": "Která značka upozorňuje na práci na pozemní komunikaci nebo v jejím bezprostředním okolí, která by mohla ohrozit bezpečnost provozu na pozemních komunikacích nebo při níž by mohli být provozem ohroženi pracovníci tuto činnost vykonávající.?",
-    "answers": {
-      "19819": "1.",
-      "19820": "2.",
-      "19821": "3."
-    },
+    "answers": { "19819": "1.", "19820": "2.", "19821": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/A18_6328337053609.jpg",
@@ -1416,11 +1374,7 @@
   "2081": {
     "answerId": "19817",
     "question": "Která značka nepatří do skupiny značek výstražných?",
-    "answers": {
-      "19816": "1.",
-      "19817": "2.",
-      "19818": "3."
-    },
+    "answers": { "19816": "1.", "19817": "2.", "19818": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/A 18.jpg",
@@ -1431,11 +1385,7 @@
   "2083": {
     "answerId": "26123",
     "question": "Která z vyobrazených dopravních značek nepatří do značek upravujících přednost?",
-    "answers": {
-      "26121": "1.",
-      "26122": "2.",
-      "26123": "3."
-    },
+    "answers": { "26121": "1.", "26122": "2.", "26123": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/P1_6328337157284.jpg",
@@ -1446,11 +1396,7 @@
   "2084": {
     "answerId": "25438",
     "question": "Která z těchto dopravních značek zakazuje zastavení?",
-    "answers": {
-      "25438": "1.",
-      "25439": "2.",
-      "25440": "3."
-    },
+    "answers": { "25438": "1.", "25439": "2.", "25440": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/B28_6328337218337.jpg",
@@ -1461,11 +1407,7 @@
   "2085": {
     "answerId": "19793",
     "question": "Která značka zakazuje stání?",
-    "answers": {
-      "19792": "1.",
-      "19793": "2.",
-      "19794": "3."
-    },
+    "answers": { "19792": "1.", "19793": "2.", "19794": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/B28_6328337218337.jpg",
@@ -1575,19 +1517,13 @@
   "2131": {
     "answerId": "22464",
     "question": "Je jezdec na koni, který se pohybuje po pozemní komunikaci, řidičem?",
-    "answers": {
-      "22463": "Ne.",
-      "22464": "Ano."
-    },
+    "answers": { "22463": "Ne.", "22464": "Ano." },
     "noShuffle": true
   },
   "2132": {
     "answerId": "22465",
     "question": "Platí pro jezdce na koni, který jede po pozemní komunikaci, povinnosti a práva řidiče?",
-    "answers": {
-      "22465": "Ano.",
-      "22466": "Ne."
-    },
+    "answers": { "22465": "Ano.", "22466": "Ne." },
     "noShuffle": true
   },
   "2137": {
@@ -1602,10 +1538,7 @@
   "2142": {
     "answerId": "22422",
     "question": "Mohou účastníci provozu na pozemních komunikacích používat tzv. aktivní antiradary, tj. technické prostředky, které znemožňují nebo ovlivňují funkci technických prostředků používaných policií při dohledu na bezpečnost provozu?",
-    "answers": {
-      "22421": "Ano.",
-      "22422": "Ne."
-    },
+    "answers": { "22421": "Ano.", "22422": "Ne." },
     "noShuffle": true
   },
   "2145": {
@@ -1620,10 +1553,7 @@
   "2146": {
     "answerId": "22431",
     "question": "Je vozka, který řídí potahové vozidlo, řidičem?",
-    "answers": {
-      "22430": "Ne.",
-      "22431": "Ano."
-    },
+    "answers": { "22430": "Ne.", "22431": "Ano." },
     "noShuffle": true
   },
   "2158": {
@@ -1665,10 +1595,7 @@
   "2171": {
     "answerId": "22386",
     "question": "Je řidič povinen dbát zvýšené opatrnosti vůči výcvikovým vozidlům autoškoly?",
-    "answers": {
-      "22386": "Ano.",
-      "22387": "Ne."
-    },
+    "answers": { "22386": "Ano.", "22387": "Ne." },
     "noShuffle": true
   },
   "2179": {
@@ -1782,11 +1709,7 @@
   "2209": {
     "answerId": "22372",
     "question": "Která z vyobrazených dodatkových tabulek vyznačuje úsek platnosti dopravní značky, pod kterou je umístěna:",
-    "answers": {
-      "22372": "1.",
-      "22373": "2.",
-      "22374": "3."
-    },
+    "answers": { "22372": "1.", "22373": "2.", "22374": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/E8d_6328349854807.gif",
@@ -1815,11 +1738,7 @@
   "2215": {
     "answerId": "22261",
     "question": "Která z vyobrazených dopravních značek označuje hlavní pozemní komunikaci.",
-    "answers": {
-      "22261": "1.",
-      "22262": "2.",
-      "22263": "3."
-    },
+    "answers": { "22261": "1.", "22262": "2.", "22263": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/P1_6328349873949.gif",
@@ -1830,10 +1749,7 @@
   "2216": {
     "answerId": "22265",
     "question": "Může řidič motorového vozidla předjíždět bezprostředně před přechodem pro chodce, pokud dává znamení o změně směru jízdy?",
-    "answers": {
-      "22264": "Ano.",
-      "22265": "Ne."
-    },
+    "answers": { "22264": "Ano.", "22265": "Ne." },
     "noShuffle": true
   },
   "2217": {
@@ -1857,11 +1773,7 @@
   "2227": {
     "answerId": "22209",
     "question": "Která z vyobrazených dodatkových tabulek vyznačuje směr k místu, ke kterému se vztahuje dopravní značka, pod kterou je tato tabulka umístěna:",
-    "answers": {
-      "22207": "1.",
-      "22208": "2.",
-      "22209": "3."
-    },
+    "answers": { "22207": "1.", "22208": "2.", "22209": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/E8d_6328349919889.gif",
@@ -1872,11 +1784,7 @@
   "2228": {
     "answerId": "22212",
     "question": "Která z vyobrazených dopravních značek zakazuje řidiči jet rychlostí 40 km/h:",
-    "answers": {
-      "22210": "1.",
-      "22211": "2.",
-      "22212": "3."
-    },
+    "answers": { "22210": "1.", "22211": "2.", "22212": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/C 6a.gif",
@@ -2668,11 +2576,7 @@
   "2522": {
     "answerId": "24796",
     "question": "Jste řidičem vozidla z výhledu. Určete, kolikáté projede Vaše vozidlo touto křižovatkou:",
-    "answers": {
-      "24796": "Poslední.",
-      "24797": "Druhé.",
-      "24798": "Třetí."
-    },
+    "answers": { "24796": "Poslední.", "24797": "Druhé.", "24798": "Třetí." },
     "video": "/Content/ImageQuestion/1825"
   },
   "2523": {
@@ -2835,11 +2739,7 @@
   "2566": {
     "answerId": "25353",
     "question": "Vyberte dopravní značku, která řidiče upozorňuje na místo, kde je provoz na pozemní komunikaci řízen světelnými signály, které by řidič jinak neočekával, nebo které nejsou s ohledem na místní podmínky viditelné z dostatečné vzdálenosti. :",
-    "answers": {
-      "25352": "1.",
-      "25353": "2.",
-      "25354": "3."
-    },
+    "answers": { "25352": "1.", "25353": "2.", "25354": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/A1b_6328461187930.gif",
@@ -2915,10 +2815,7 @@
   "2649": {
     "answerId": "26283",
     "question": "Po pozemní komunikaci jde osoba, která vede psa. Vztahují se na ni povinnosti průvodce vedených zvířat?",
-    "answers": {
-      "26283": "Ne.",
-      "26284": "Ano."
-    },
+    "answers": { "26283": "Ne.", "26284": "Ano." },
     "noShuffle": true
   },
   "2650": {
@@ -2933,10 +2830,7 @@
   "2652": {
     "answerId": "26297",
     "question": "Patří k povinnostem účastníka provozu na pozemních komunikacích řídit se pokyny strážníků obecní policie?",
-    "answers": {
-      "26297": "Ano.",
-      "26298": "Ne."
-    },
+    "answers": { "26297": "Ano.", "26298": "Ne." },
     "noShuffle": true
   },
   "2653": {
@@ -2996,10 +2890,7 @@
   "2663": {
     "answerId": "26407",
     "question": "Patří vojenský policista mezi osoby, které jsou oprávněny k řízení provozu na pozemních komunikacích?",
-    "answers": {
-      "26407": "Ano.",
-      "26408": "Ne."
-    },
+    "answers": { "26407": "Ano.", "26408": "Ne." },
     "noShuffle": true
   },
   "2664": {
@@ -3901,11 +3792,7 @@
   "2937": {
     "answerId": "30450",
     "question": "V obytné a pěší zóně smí řidič jet rychlostí nejvýše:",
-    "answers": {
-      "30449": "40 km/h.",
-      "30450": "20 km/h.",
-      "30451": "30 km/h."
-    }
+    "answers": { "30449": "40 km/h.", "30450": "20 km/h.", "30451": "30 km/h." }
   },
   "2938": {
     "answerId": "28633",
@@ -4319,11 +4206,7 @@
   "3030": {
     "answerId": "29447",
     "question": "Vyberte dopravní značku, která označuje konec úseku pozemní komunikace s nejnižší dovolenou rychlostí:",
-    "answers": {
-      "29446": "1.",
-      "29447": "2.",
-      "29448": "3."
-    },
+    "answers": { "29446": "1.", "29447": "2.", "29448": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/C 6a.gif",
@@ -4334,11 +4217,7 @@
   "3031": {
     "answerId": "29453",
     "question": "Která z vyobrazených dopravních značek zakazuje stání v označeném úseku pozemní komunikace?",
-    "answers": {
-      "29452": "1.",
-      "29453": "2.",
-      "29454": "3."
-    },
+    "answers": { "29452": "1.", "29453": "2.", "29454": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/B28_6328580868335.gif",
@@ -4492,10 +4371,7 @@
   "3080": {
     "answerId": "30099",
     "question": "Mám, jako řidič automobilu z výhledu, za povinnost dát vozidlu přijíždějícímu zprava přednost v jízdě?",
-    "answers": {
-      "30098": "Ano.",
-      "30099": "Ne."
-    },
+    "answers": { "30098": "Ano.", "30099": "Ne." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/2168"
   },
@@ -4512,10 +4388,7 @@
   "3082": {
     "answerId": "30052",
     "question": "Řidič smí oddělený tramvajový pás přejíždět jen příčně. Může přitom omezit v jízdě tramvaj?",
-    "answers": {
-      "30051": "Ano.",
-      "30052": "Ne."
-    },
+    "answers": { "30051": "Ano.", "30052": "Ne." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/2175"
   },
@@ -4552,10 +4425,7 @@
   "3087": {
     "answerId": "30065",
     "question": "Lze místo, kde se spojují vyobrazené pozemní komunikace, považovat za křižovatku?",
-    "answers": {
-      "30065": "Ne.",
-      "30066": "Ano."
-    },
+    "answers": { "30065": "Ne.", "30066": "Ano." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/2188"
   },
@@ -4592,10 +4462,7 @@
   "3091": {
     "answerId": "30076",
     "question": "Je cyklista řidičem se všemi právy a povinnostmi účastníka provozu na pozemních komunikacích?",
-    "answers": {
-      "30076": "Ano.",
-      "30077": "Ne."
-    },
+    "answers": { "30076": "Ano.", "30077": "Ne." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/2197"
   },
@@ -4612,10 +4479,7 @@
   "3093": {
     "answerId": "30082",
     "question": "Přípojné vozidlo, které jede v prostředním jízdním pruhu, má nejvyšší povolenou rychlost 75 km/h. Může toto vozidlo jet po dálnici?",
-    "answers": {
-      "30081": "Ano.",
-      "30082": "Ne."
-    },
+    "answers": { "30081": "Ano.", "30082": "Ne." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/2202"
   },
@@ -4689,11 +4553,7 @@
   "3103": {
     "answerId": "30140",
     "question": "Při zvyšování rychlosti jízdy se zorné pole řidiče:",
-    "answers": {
-      "30139": "Nemění.",
-      "30140": "Zužuje.",
-      "30141": "Rozšiřuje."
-    }
+    "answers": { "30139": "Nemění.", "30140": "Zužuje.", "30141": "Rozšiřuje." }
   },
   "3104": {
     "answerId": "30145",
@@ -4744,10 +4604,7 @@
   "3128": {
     "answerId": "30402",
     "question": "Je jezdec na koni, který se pohybuje po pozemní komunikaci, řidičem a platí pro něj povinnosti a práva účastníků provozu na pozemních komunikacích?",
-    "answers": {
-      "30402": "Ano.",
-      "30403": "Ne."
-    },
+    "answers": { "30402": "Ano.", "30403": "Ne." },
     "noShuffle": true
   },
   "3129": {
@@ -4835,10 +4692,7 @@
   "3144": {
     "answerId": "30635",
     "question": "Je jezdec na koloběžce, který se pohybuje po pozemní komunikaci, řidičem?",
-    "answers": {
-      "30634": "Ne.",
-      "30635": "Ano."
-    },
+    "answers": { "30634": "Ne.", "30635": "Ano." },
     "noShuffle": true
   },
   "3146": {
@@ -4899,10 +4753,7 @@
   "3152": {
     "answerId": "30820",
     "question": "Lze před nejbližší dopravní značkou zastavit za účelem neprodleného vyložení nákladu?",
-    "answers": {
-      "30819": "Ano.",
-      "30820": "Ne."
-    },
+    "answers": { "30819": "Ano.", "30820": "Ne." },
     "noShuffle": true,
     "video": "/Content/ImageQuestion/2254"
   },
@@ -5312,11 +5163,7 @@
   "3267": {
     "answerId": "31991",
     "question": "Která z vyobrazených dopravních značek upozorňuje na práci na pozemní komunikaci nebo v jejím bezprostředním okolí, která by mohla ohrozit bezpečnost provozu na pozemních komunikacích nebo při níž by mohli být provozem ohroženi pracovníci tuto činnost vykonávající.?",
-    "answers": {
-      "31989": "1.",
-      "31990": "2.",
-      "31991": "3."
-    },
+    "answers": { "31989": "1.", "31990": "2.", "31991": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/A18_6329028536567.jpg",
@@ -5445,11 +5292,7 @@
   "3583": {
     "answerId": "3418646",
     "question": "Vyberte dopravní značku, která řidiče upozorňuje na místo, kde je provoz na pozemní komunikaci řízen světelnými signály, které by řidič jinak neočekával, nebo které nejsou s ohledem na místní podmínky viditelné z dostatečné vzdálenosti:",
-    "answers": {
-      "3418645": "1.",
-      "3418646": "2.",
-      "3418647": "3."
-    },
+    "answers": { "3418645": "1.", "3418646": "2.", "3418647": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/A1b_6336035528026.gif",
@@ -5460,11 +5303,7 @@
   "3634": {
     "answerId": "3418886",
     "question": "Která z vyobrazených dopravních značek neumožňuje řidiči, pokud to ostatní okolnosti provozu na pozemních komunikacích dovolují, jet rychlostí 25 km/h :",
-    "answers": {
-      "3418886": "1.",
-      "3418887": "2.",
-      "3418888": "3."
-    },
+    "answers": { "3418886": "1.", "3418887": "2.", "3418888": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/C 6a.gif",
@@ -5587,11 +5426,7 @@
   "4072": {
     "answerId": "3422756",
     "question": "Rychlou zdravotnickou záchranou službu přivoláme na telefonním čísle:",
-    "answers": {
-      "3422756": "155.",
-      "3422757": "150.",
-      "3422758": "158."
-    }
+    "answers": { "3422756": "155.", "3422757": "150.", "3422758": "158." }
   },
   "4076": {
     "answerId": "3422781",
@@ -6429,10 +6264,7 @@
   "4484": {
     "answerId": "3425625",
     "question": "Hrozí trestní postih, pokud neposkytnete první pomoc:",
-    "answers": {
-      "3425625": "ano",
-      "3425626": "ne"
-    }
+    "answers": { "3425625": "ano", "3425626": "ne" }
   },
   "4485": {
     "answerId": "3425631",
@@ -6591,10 +6423,7 @@
   "4510": {
     "answerId": "3425812",
     "question": "Je porušením zákona, pokud vozidlo svítí za normální, nesnížené viditelnosti pouze světly pro denní svícení?",
-    "answers": {
-      "3425812": "Ne.",
-      "3425813": "Ano."
-    },
+    "answers": { "3425812": "Ne.", "3425813": "Ano." },
     "noShuffle": true
   },
   "4511": {
@@ -6754,10 +6583,7 @@
   "4540": {
     "answerId": "3426119",
     "question": "Vztahuje se na řidiče tramvaje povinnost zastavit vozidlo před přechodem pro chodce, pokud by ohrozil nebo omezil chodce, který zjevně hodlá přecházet pozemní komunikaci po přechodu pro chodce?",
-    "answers": {
-      "3426119": "Ne.",
-      "3426120": "Ano."
-    },
+    "answers": { "3426119": "Ne.", "3426120": "Ano." },
     "noShuffle": true
   },
   "4541": {
@@ -6945,11 +6771,7 @@
   "5295": {
     "answerId": "3429082",
     "question": "Která z vyobrazených dopravních značek neumožňuje řidiči, pokud si to nevynutí ostatní okolnosti provozu na pozemních komunikacích, jet rychlostí 25 km/h:",
-    "answers": {
-      "3429082": "1.",
-      "3429083": "2.",
-      "3429084": "3."
-    },
+    "answers": { "3429082": "1.", "3429083": "2.", "3429084": "3." },
     "noShuffle": true,
     "images": [
       "/Vestnik/GetImage/C 6a.gif",
@@ -6978,11 +6800,7 @@
   "5372": {
     "answerId": "3429313",
     "question": "Které směrové sloupky označují úsek pozemní komunikace, kde hrozí zvýšené nebezpečí námrazy:",
-    "answers": {
-      "3429313": "modré",
-      "3429314": "bílé",
-      "3429315": "červené"
-    },
+    "answers": { "3429313": "modré", "3429314": "bílé", "3429315": "červené" },
     "images": [
       "/Vestnik/GetImage/1006_modré.png",
       "/Vestnik/GetImage/1006_bíle.png",
@@ -7070,10 +6888,7 @@
   "5382": {
     "answerId": "3429341",
     "question": "Řidič vozidla z výhledu se chystá odbočit vlevo. Musí dát přednost v jízdě tramvaji?",
-    "answers": {
-      "3429341": "Ne.",
-      "3429342": "Ano."
-    },
+    "answers": { "3429341": "Ne.", "3429342": "Ano." },
     "noShuffle": true,
     "images": ["/Content/ImageQuestion/3383"]
   },
@@ -7230,10 +7045,7 @@
   "5398": {
     "answerId": "3429388",
     "question": "Smí řidič z výhledu zastavit vozidlo na přechodu pro chodce, aby měl náležitý výhled do křižovatky?",
-    "answers": {
-      "3429388": "ano",
-      "3429389": "ne"
-    },
+    "answers": { "3429388": "ano", "3429389": "ne" },
     "images": ["/Content/ImageQuestion/3415"]
   },
   "5399": {
