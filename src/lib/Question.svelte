@@ -4,6 +4,7 @@
 
   export let data: QuestionData;
   export let answered: boolean;
+  export let mediaIndex: Record<string, string>;
 
   const dispatch = createEventDispatcher();
   let shuffledAnswers: [number, string, string][];
@@ -34,14 +35,14 @@
   <p>{data.question}</p>
   {#if data.images !== undefined}
     <div class="media">
-      {#each data.images as imgPath}
-        <img src={"https://etesty2.mdcr.cz" + imgPath} alt="Question detail" />
+      {#each data.images as img}
+        <img src={mediaIndex[img]} alt="Question detail" />
       {/each}
     </div>
   {/if}
   {#if data.video !== undefined}
     <div class="media">
-      <video autoplay loop muted src={"https://etesty2.mdcr.cz" + data.video} />
+      <video autoplay loop muted src={mediaIndex[data.video]} />
     </div>
   {/if}
   <div class="answers">

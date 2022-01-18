@@ -17,6 +17,7 @@ const server = http.createServer((req, res) => {
         format: "iife",
         bundle: true,
         write: false,
+        sourcemap: "inline",
         entryPoints: ["dataloader/download.ts"],
       })
       .then((build) => {

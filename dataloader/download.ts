@@ -1,4 +1,4 @@
-import { checkedNumberToArray, type QuestionData } from "../src/lib/utils";
+import { checkLength, type QuestionData } from "../src/lib/utils";
 
 async function fetchAll(): Promise<Record<string, QuestionData>> {
   const questions: Record<string, QuestionData> = {};
@@ -122,21 +122,38 @@ async function buildImageIndex(
   }
 
   const encoder = new TextEncoder();
-  const output: ArrayBuffer[] = (
-    await Promise.all(
-      [...toDownload].map(async (path) => {
-        const one = [];
-        const nameArray = encoder.encode(path);
-        one.push(checkedNumberToArray(nameArray.byteLength, Uint16Array));
-        one.push(nameArray);
-        const r = await fetch("https://etesty2.mdcr.cz" + path);
-        const buffer = await r.arrayBuffer();
-        one.push(checkedNumberToArray(buffer.byteLength, Uint32Array));
-        one.push(buffer);
-        return one;
-      })
-    )
-  ).flat();
+  const output: ArrayBuffer[] = await Promise.all(
+    [...toDownload].map(async (path) => {
+      const nameArray = encoder.encode(path);
+      checkLength(nameArray, Uint16Array);
+      const r = await fetch("https://etesty2.mdcr.cz" + path);
+      const imgData = await r.arrayBuffer();
+      checkLength(imgData, Uint32Array);
+      const out = new ArrayBuffer(
+        Uint16Array.BYTES_PER_ELEMENT +
+          nameArray.byteLength +
+          Uint32Array.BYTES_PER_ELEMENT +
+          imgData.byteLength
+      );
+      new DataView(out, 0, Uint16Array.BYTES_PER_ELEMENT).setUint16(
+        0,
+        nameArray.byteLength
+      );
+      new Uint8Array(out).set(nameArray, Uint16Array.BYTES_PER_ELEMENT);
+      new DataView(
+        out,
+        Uint16Array.BYTES_PER_ELEMENT + nameArray.byteLength,
+        Uint32Array.BYTES_PER_ELEMENT
+      ).setUint32(0, imgData.byteLength);
+      new Uint8Array(out).set(
+        new Uint8Array(imgData),
+        Uint16Array.BYTES_PER_ELEMENT +
+          nameArray.byteLength +
+          Uint32Array.BYTES_PER_ELEMENT
+      );
+      return out;
+    })
+  );
 
   const totalLength = output.reduce((s, buf) => s + buf.byteLength, 0);
   const outBuf = new Uint8Array(totalLength);

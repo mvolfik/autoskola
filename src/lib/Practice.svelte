@@ -6,6 +6,7 @@
   import type { Writable } from "svelte/store";
 
   export let questions: Record<string, QuestionData>;
+  export let mediaIndex: Record<string, string>;
 
   $: keys = [...Object.keys(questions)].sort();
   let stats: Writable<Record<string, number>>;
@@ -41,7 +42,6 @@
     }
     stats = writable(value);
     stats.subscribe((v) => {
-      console.log(v);
       localStorage.setItem("stats", JSON.stringify(v));
     });
   });
@@ -115,6 +115,7 @@
 
 {#if currentQuestion}
   <Question
+    {mediaIndex}
     on:answer={({ detail }) => {
       if (detail) {
         if ($stats[currentKey] === undefined) {
