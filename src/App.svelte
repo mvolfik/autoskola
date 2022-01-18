@@ -1,12 +1,10 @@
 <script lang="ts">
+  import dataJson from "./data/data.json?url";
   import Practice from "./lib/Practice.svelte";
   import { downloadMediaIndex, type QuestionData } from "./lib/utils";
 
   const data: Promise<[Record<string, QuestionData>, Record<string, string>]> =
-    Promise.all([
-      fetch("/data.json").then((r) => r.json()),
-      downloadMediaIndex(),
-    ]);
+    Promise.all([fetch(dataJson).then((r) => r.json()), downloadMediaIndex()]);
 </script>
 
 {#await data}

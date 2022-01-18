@@ -1,3 +1,5 @@
+import mediaBundle from "../data/media-bundle.bin?url";
+
 export interface QuestionData {
   answerId: string;
   question: string;
@@ -19,7 +21,7 @@ export function checkLength(
 }
 
 export async function downloadMediaIndex(): Promise<Record<string, string>> {
-  const r = await fetch("/media-bundle.bin");
+  const r = await fetch(mediaBundle);
   const decoder = new TextDecoder();
   const data = await r.arrayBuffer();
   const dataView = new DataView(data);

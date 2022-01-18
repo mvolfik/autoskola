@@ -53,7 +53,7 @@ const server = http.createServer((req, res) => {
   }
 
   // else: it's an upload!
-  req.pipe(fs.createWriteStream("public" + req.url));
+  req.pipe(fs.createWriteStream("src/data" + req.url));
 
   req.on("end", () => {
     res
