@@ -66,8 +66,14 @@
 </div>
 
 <style lang="scss">
-  .media > * {
-    max-width: 100%;
+  .media {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    & > * {
+      min-width: 0;
+      flex: auto 0 1;
+    }
   }
 
   .answers {
