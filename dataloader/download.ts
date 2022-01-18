@@ -122,16 +122,21 @@ async function buildImageIndex(
   }
 
   const encoder = new TextEncoder();
-  const output: ArrayBuffer[] = [];
-  for (const path of toDownload) {
-    const nameArray = encoder.encode(path);
-    output.push(checkedNumberToArray(nameArray.byteLength, Uint16Array));
-    output.push(nameArray);
-    const r = await fetch("https://etesty2.mdcr.cz" + path);
-    const buffer = await r.arrayBuffer();
-    output.push(checkedNumberToArray(buffer.byteLength, Uint32Array));
-    output.push(buffer);
-  }
+  const output: ArrayBuffer[] = (
+    await Promise.all(
+      [...toDownload].map(async (path) => {
+        const one = [];
+        const nameArray = encoder.encode(path);
+        one.push(checkedNumberToArray(nameArray.byteLength, Uint16Array));
+        one.push(nameArray);
+        const r = await fetch("https://etesty2.mdcr.cz" + path);
+        const buffer = await r.arrayBuffer();
+        one.push(checkedNumberToArray(buffer.byteLength, Uint32Array));
+        one.push(buffer);
+        return one;
+      })
+    )
+  ).flat();
 
   const totalLength = output.reduce((s, buf) => s + buf.byteLength, 0);
   const outBuf = new Uint8Array(totalLength);
