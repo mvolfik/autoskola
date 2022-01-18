@@ -1,11 +1,8 @@
 export interface QuestionData {
+  answerId: string;
   question: string;
   answers: Record<string, string>;
-  image?: string;
+  images?: string[];
   video?: string;
+  noShuffle?: true;
 }
-
-export type Questions = Record<
-  string,
-  { answerId: string; data: QuestionData }
->;

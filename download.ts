@@ -1,7 +1,7 @@
-import type { Questions, QuestionData } from "./src/lib/utils";
+import type { QuestionData } from "./src/lib/utils";
 
 async function fetchAll() {
-  const questions: Questions = {};
+  const questions: Record<string, QuestionData> = {};
   await Promise.all(
     [24, 16, 25, 14, 17, 19, 21, 22, 20].map(async (areaId) => {
       const items = await fetchLecture(areaId);
@@ -10,7 +10,7 @@ async function fetchAll() {
           if (questions[id] !== undefined) {
             console.warn(`ID ${id} was already seen`);
           } else {
-            const x = { answerId, data: await dlOne(id) };
+            const x = { answerId, ...(await dlOne(id)) };
             questions[id] = x;
           }
         })
@@ -49,7 +49,7 @@ async function fetchLecture(
 
 const parser = new DOMParser();
 
-async function dlOne(id: number): Promise<any> {
+async function dlOne(id: number): Promise<Omit<QuestionData, "answerId">> {
   const r = await fetch("https://etesty2.mdcr.cz/Test/RenderQuestion", {
     method: "POST",
     body: `id=${id}`,
@@ -58,25 +58,46 @@ async function dlOne(id: number): Promise<any> {
   const text = await r.text();
   const tree = parser.parseFromString(text, "text/html");
 
-  const data: QuestionData = {
-    question: [...tree.querySelectorAll("p.question-text")]
+  const data: Omit<QuestionData, "answerId"> = {
+    question: [
+      ...tree.querySelectorAll<HTMLParagraphElement>("p.question-text"),
+    ]
       .map((el) => el.innerText.trim())
       .filter((x) => x.length > 3)
       .join(";"),
     answers: {},
   };
   tree
-    .querySelectorAll("div.answer-container > div")
-    .forEach((node: HTMLDivElement) => {
+    .querySelectorAll<HTMLDivElement>("div.answer-container > div")
+    .forEach((node: HTMLDivElement, i: number) => {
       const id = node.dataset.answerid;
-      data.answers[id] = node.querySelector("p").innerText.trim();
-    });
 
-  const image = tree.querySelector("div.image-frame img");
-  if (image !== null) {
-    data.image = image.getAttribute("src");
+      const text = node.querySelector("p").innerText.trim();
+      if (text === ".") {
+        data.answers[id] = `${i + 1}.`;
+        data.noShuffle = true;
+      } else {
+        data.answers[id] = text;
+      }
+    });
+  const sortedAnswers = [...Object.values(data.answers)].sort();
+  if (
+    sortedAnswers.length === 2 &&
+    sortedAnswers[0] === "Ano." &&
+    sortedAnswers[1] === "Ne."
+  ) {
+    data.noShuffle = true;
   }
-  const video = tree.querySelector("div.image-frame video source");
+
+  const images = [
+    ...tree.querySelectorAll<HTMLImageElement>("div.image-frame img"),
+  ].map((node: HTMLImageElement) => node.getAttribute("src"));
+  if (images.length > 0) {
+    data.images = images;
+  }
+  const video = tree.querySelector<HTMLSourceElement>(
+    "div.image-frame video source"
+  );
   if (video !== null) {
     data.video = video.getAttribute("src");
   }

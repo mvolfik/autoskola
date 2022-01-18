@@ -1,10 +1,10 @@
 <script lang="ts">
-  import type { Questions } from "./utils";
+  import type { QuestionData } from "./utils";
   import Question from "./Question.svelte";
   import { onMount } from "svelte";
   import { Writable, writable } from "svelte/store";
 
-  export let questions: Questions;
+  export let questions: Record<string, QuestionData>;
 
   $: keys = [...Object.keys(questions)].sort();
   let stats: Writable<Record<string, number>>;

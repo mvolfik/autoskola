@@ -1,7 +1,10 @@
 <script lang="ts">
   import Practice from "./lib/Practice.svelte";
+  import type { QuestionData } from "./lib/utils";
 
-  const data = fetch("/data.json").then((r) => r.json());
+  const data: Promise<Record<string, QuestionData>> = fetch("/data.json").then(
+    (r) => r.json()
+  );
 </script>
 
 {#await data}

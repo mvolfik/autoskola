@@ -2,13 +2,16 @@
   import { createEventDispatcher } from "svelte";
   import type { QuestionData } from "./utils";
 
-  export let data: { answerId: string; data: QuestionData };
+  export let data: QuestionData;
   export let answered: boolean;
 
   const dispatch = createEventDispatcher();
-  $: shuffledAnswers = [...Object.entries(data.data.answers)].sort(() =>
-    Math.random() > 0.5 ? 1 : -1
-  );
+  let shuffledAnswers: [string, string][];
+  $: {
+    shuffledAnswers = [...Object.entries(data.answers)];
+    if (!data.noShuffle)
+      shuffledAnswers.sort(() => (Math.random() > 0.5 ? 1 : -1));
+  }
 
   function choose(id: string) {
     if (answered) return;
@@ -28,23 +31,17 @@
   }}
 />
 <div>
-  <p>{data.data.question}</p>
-  {#if data.data.image !== undefined}
+  <p>{data.question}</p>
+  {#if data.images !== undefined}
     <div class="media">
-      <img
-        src={"https://etesty2.mdcr.cz" + data.data.image}
-        alt="Question detail"
-      />
+      {#each data.images as imgPath}
+        <img src={"https://etesty2.mdcr.cz" + imgPath} alt="Question detail" />
+      {/each}
     </div>
   {/if}
-  {#if data.data.video !== undefined}
+  {#if data.video !== undefined}
     <div class="media">
-      <video
-        autoplay
-        loop
-        muted
-        src={"https://etesty2.mdcr.cz" + data.data.video}
-      />
+      <video autoplay loop muted src={"https://etesty2.mdcr.cz" + data.video} />
     </div>
   {/if}
   <div class="answers">
