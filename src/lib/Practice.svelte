@@ -143,8 +143,7 @@
       <button
         disabled={!answered}
         on:click={next}
-        style="width: 100%; margin-top: 1rem;"
-        >Pokračovat (&lt;Enter&gt;)</button
+        style="width: 100%; margin-top: 1rem;">&lt;Enter&gt;: Pokračovat</button
       >
     </div>
   </Question>
@@ -165,8 +164,8 @@
   }
 
   .info {
-    display: grid;
-    grid-auto-rows: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   .start {

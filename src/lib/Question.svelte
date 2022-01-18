@@ -6,11 +6,11 @@
   export let answered: boolean;
 
   const dispatch = createEventDispatcher();
-  let shuffledAnswers: [string, string][];
+  let shuffledAnswers: [number, string, string][];
   $: {
-    shuffledAnswers = [...Object.entries(data.answers)];
-    if (!data.noShuffle)
-      shuffledAnswers.sort(() => (Math.random() > 0.5 ? 1 : -1));
+    const ans = [...Object.entries(data.answers)];
+    if (!data.noShuffle) ans.sort(() => (Math.random() > 0.5 ? 1 : -1));
+    shuffledAnswers = ans.map(([k, v], i) => [i + 1, k, v]);
   }
 
   function choose(id: string) {
@@ -25,7 +25,7 @@
   on:keyup={(e) => {
     for (let i = 1; i <= shuffledAnswers.length; i++) {
       if (e.code === `Digit${i}` || e.code === `Numpad${i}`) {
-        choose(shuffledAnswers[i - 1][0]);
+        choose(shuffledAnswers[i - 1][1]);
       }
     }
   }}
@@ -45,7 +45,7 @@
     </div>
   {/if}
   <div class="answers">
-    {#each shuffledAnswers as [ansId, answer] (ansId)}
+    {#each shuffledAnswers as [i, ansId, answer] (ansId)}
       <div>
         <button
           class="answer"
@@ -55,7 +55,7 @@
             choose(ansId);
           }}
         >
-          {answer}
+          &lt;{i}&gt;: {answer}
         </button>
       </div>
     {/each}
@@ -63,11 +63,6 @@
       <slot />
     </div>
   </div>
-  {#if !answered}
-    <p style="color: #777;">
-      Vyberte odpověď kliknutím nebo stiskem kláves 1/2/3
-    </p>
-  {/if}
 </div>
 
 <style lang="scss">
@@ -78,7 +73,6 @@
   .answers {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 1rem;
     margin-top: 2rem;
 
