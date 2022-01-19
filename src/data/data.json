@@ -3681,6 +3681,15 @@
       "28463": "Nesmí být překročena maximální přípustná hmotnost vozidla a maximální přípustná hmotnost na nápravu vozidla."
     }
   },
+  "2916": {
+    "answerId": "28467",
+    "question": "Při přepravě živých zvířat:",
+    "answers": {
+      "28467": "Nesmí být ohrožena bezpečnost řidiče, přepravovaných osob ani zvířat a ani bezpečnost provozu na pozemních komunikacích.",
+      "28468": "Musí být u vozidel i za nesnížené viditelnosti rozsvícena jen potkávací světla.",
+      "28469": "Musí být vozidlo vybaveno zvláštními výstražnými světly oranžové barvy."
+    }
+  },
   "2917": {
     "answerId": "28475",
     "question": "Místní úprava provozu na pozemních komunikacích:",
@@ -3760,6 +3769,15 @@
       "28539": "Nejvýše 20 km.h-1.",
       "28540": "Nejvýše 40 km.h-1.",
       "28541": "Nejvýše 30 km.h-1."
+    }
+  },
+  "2930": {
+    "answerId": "28572",
+    "question": "Při přepravě sypkých substrátů, například písku, musí být:",
+    "answers": {
+      "28572": "Náklad zajištěn tak, aby nedocházelo k jeho samovolnému odlétávání, například plachtou.",
+      "28573": "Vozidlo viditelně označeno zvláštním označením vozidla přepravujícího sypké substráty.",
+      "28574": "Vozidlo vybaveno zvláštním výstražným světlem oranžové barvy, které musí být při jízdě zapnuté."
     }
   },
   "2931": {

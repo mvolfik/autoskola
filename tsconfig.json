@@ -10,8 +10,7 @@
     "strict": true
   },
   "include": [
-    "dataloader/download.ts",
-    "dataloader/server.js",
+    "dataloader/*.ts",
     "src/**/*.d.ts",
     "src/**/*.ts",
     "src/**/*.js",
