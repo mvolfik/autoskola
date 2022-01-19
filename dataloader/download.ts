@@ -1,4 +1,15 @@
-import { checkLength, type QuestionData } from "../src/lib/utils";
+import type { QuestionData } from "../src/lib/utils";
+
+export function checkLength(
+  v: ArrayBufferLike,
+  ArrayType: { BYTES_PER_ELEMENT: number }
+) {
+  if (v.byteLength >= Math.pow(2, ArrayType.BYTES_PER_ELEMENT * 8)) {
+    throw new Error(
+      `Can't store ${v.byteLength} in ${ArrayType.BYTES_PER_ELEMENT} bytes`
+    );
+  }
+}
 
 async function fetchAll(): Promise<Record<string, QuestionData>> {
   const questions: Record<string, QuestionData> = {};
