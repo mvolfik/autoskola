@@ -154,6 +154,7 @@
     <button on:click={next}>Start</button>
   </div>
 {/if}
+<div style="height: 10vh;" />
 
 <style lang="scss">
   .buttons {
