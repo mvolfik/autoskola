@@ -15,7 +15,7 @@
     let sum = 0;
     const weights = [];
     for (const [i, ks] of statsView.entries()) {
-      const w = ks.length / Math.pow(2, i);
+      const w = ks.length / Math.pow(4, i);
       sum += w;
       weights.push(w);
     }
