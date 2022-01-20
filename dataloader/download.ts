@@ -13,18 +13,19 @@ export function checkLength(
 }
 
 async function fetchAll(): Promise<Record<string, QuestionData>> {
-  const questionIds = (
+  let questionIds = (
     await Promise.all([24, 16, 25, 14, 17, 19, 21, 22, 20].map(fetchLecture))
   ).flat();
   questionIds.push({ id: 2916, answerId: "28467" });
   questionIds.push({ id: 2930, answerId: "28572" });
   questionIds.sort(({ id }, { id: id2 }) => id - id2);
-  let deleted = 0;
-  for (let i = 1; i < questionIds.length - deleted; i++) {
+  let i = 1;
+  while (i < questionIds.length) {
     if (questionIds[i - 1].id === questionIds[i].id) {
       console.warn(`Question was duplicated: ${questionIds[i].id}`);
-      deleted += 1;
-      i -= 1;
+      questionIds = [...questionIds.slice(0, i - 1), ...questionIds.slice(i)];
+    } else {
+      i += 1;
     }
   }
 
